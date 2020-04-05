@@ -1,0 +1,1 @@
+Scaffold-DbContext "Data Source=DESKTOP-F752OLD;Initial Catalog=TravelTour_DB;User ID=sa;Password=123" Microsoft.EntityFrameworkCore.SqlServer -o Models
