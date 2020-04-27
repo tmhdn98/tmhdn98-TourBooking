@@ -10,21 +10,22 @@ using Newtonsoft.Json;
 
 namespace IUH.TOURBOOKING.WEBSITE.ViewComponents
 {
-    public class Theme : ViewComponent
+    public class Foreign : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
-            var servicename = "api/LsThemes";
+            var servicename = "api/LsTourGroups/getForeign";
             var data = "";
             string uri = string.Format("https://{0}:{1}/{2}", "localhost", "44317", servicename);
             Dictionary<string, string> pHeaders = new Dictionary<string, string>();
             var obj = ServiceClient.Request(HttpMethod.Get, uri, data, pHeaders).Result;
             var rs = obj.Content.ReadAsStringAsync().Result;
-            List<LsTheme> theme = new List<LsTheme>();
+            List<LsTourGroup> theme = new List<LsTourGroup>();
             try
             {
-                theme = JsonConvert.DeserializeObject<List<LsTheme>>(rs);
-            }catch(Exception ex)
+                theme = JsonConvert.DeserializeObject<List<LsTourGroup>>(rs);
+            }
+            catch (Exception ex)
             {
 
             }

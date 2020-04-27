@@ -42,8 +42,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // PUT: api/LsThemes/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLsTheme(int id, LsTheme lsTheme)
         {
@@ -74,8 +74,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // POST: api/LsThemes
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<LsTheme>> PostLsTheme(LsTheme lsTheme)
         {

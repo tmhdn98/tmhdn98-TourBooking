@@ -9,6 +9,6 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
         public string Name { get; set; }
         public bool Categories { get; set; }
         public string Description { get; set; }
-        public string IsUsed { get; set; }
+        public int IsUsed { get; set; }
     }
 }

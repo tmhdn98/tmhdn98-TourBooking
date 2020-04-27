@@ -25,14 +25,17 @@
         border-radius: 7px;
         background-image: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 30%, rgba(0,0,0,0.01) 50%, rgba(0,0,0,0) 100%);
     }
-    #second {
-        position: relative;
-        z-index: -1;
+    .no-padding {
+        padding: 0px;
     }
 </style>
+<div class="col-xs-12 no-padding">
+    <h2 class="heading__title">Ưu đãi tốt nhất hôm nay</h2>
+    <p class="heading__description">Nhanh tay đặt ngay. Để mai sẽ lỡ</p>
+</div>
 <div id="discount" class="owl-carousel owl-theme">
     <div class="item" data-merge="6" style="display:block">
-        <div class="owl-lazy p-t-275 super-card" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
+        <div class="owl-lazy p-t-275 super-card shadow" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
             <a href="#">
                 <div class="card-img">
 
@@ -41,7 +44,7 @@
         </div>
     </div>
     <div class="item" data-merge="6">
-        <div class="owl-lazy p-t-275 super-card" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
+        <div class="owl-lazy p-t-275 super-card shadow" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
             <a href="#">
                 <div class="card-img">
 
@@ -50,7 +53,7 @@
         </div>
     </div>
     <div class="item" data-merge="6">
-        <div class="owl-lazy p-t-275 super-card" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
+        <div class="owl-lazy p-t-275 super-card shadow" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
             <a href="#">
                 <div class="card-img">
 
@@ -59,7 +62,7 @@
         </div>
     </div>
     <div class="item" data-merge="6">
-        <div class="owl-lazy p-t-275 super-card" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
+        <div class="owl-lazy p-t-275 super-card shadow" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
             <a href="#">
                 <div class="card-img">
 
@@ -68,7 +71,7 @@
         </div>
     </div>
     <div class="item" data-merge="6">
-        <div class="owl-lazy p-t-275 super-card" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
+        <div class="owl-lazy p-t-275 super-card shadow" data-src="https://cdn1.ivivu.com/iVivu/2020/04/16/18/khoemanh-1.png">
             <a href="#">
                 <div class="card-img">
 
@@ -78,6 +81,32 @@
     </div>
 </div>
 
-
+<script>
+    $(document).ready(function () {
+        $("#discount").owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            margin: 10,
+            lazyLoad: true,
+            responsiveClass: false,
+            responsive: {
+                0: {
+                    items: 2,
+                    loop: true
+                },
+                600: {
+                    items: 1,
+                    loop: true
+                },
+                1000: {
+                    items: 1,
+                    loop: true
+                }
+            }
+        })
+    });
+</script>
 <script src="~/vendor/jquery/jquery.min.js"></script>
 <script defer src="~/owlcarousel/owl.carousel.min.js"></script>

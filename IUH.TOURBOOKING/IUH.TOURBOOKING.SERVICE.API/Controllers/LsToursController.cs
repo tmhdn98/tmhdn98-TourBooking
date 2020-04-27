@@ -42,8 +42,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // PUT: api/LsTours/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLsTour(int id, LsTour lsTour)
         {
@@ -74,8 +74,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // POST: api/LsTours
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<LsTour>> PostLsTour(LsTour lsTour)
         {

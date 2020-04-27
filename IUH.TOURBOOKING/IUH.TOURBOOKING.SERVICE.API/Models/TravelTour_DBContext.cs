@@ -44,6 +44,7 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=DESKTOP-F752OLD;Initial Catalog=TravelTour_DB;User ID=sa;Password=123");
             }
         }
@@ -113,9 +114,9 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.ThemeId).HasColumnName("ThemeID");
+                entity.Property(e => e.GroupId).HasColumnName("GroupID");
 
-                entity.Property(e => e.TourGroupId).HasColumnName("TourGroupID");
+                entity.Property(e => e.ThemeId).HasColumnName("ThemeID");
             });
 
             modelBuilder.Entity<DtTourDetails>(entity =>
@@ -196,7 +197,7 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.TourDetailId).HasColumnName("TourDetailId");
+                entity.Property(e => e.TourDetailId).HasColumnName("TourDetailID");
 
                 entity.Property(e => e.VehicleId).HasColumnName("VehicleID");
             });
@@ -351,11 +352,6 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.Property(e => e.IsUsed)
-                    .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength();
-
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
@@ -410,10 +406,6 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(200);
-
-                entity.Property(e => e.Theme)
                     .IsRequired()
                     .HasMaxLength(200);
             });
@@ -484,9 +476,7 @@ namespace IUH.TOURBOOKING.SERVICE.API.Models
             {
                 entity.ToTable("LS_Vehicle");
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .ValueGeneratedNever();
+                entity.Property(e => e.Id).HasColumnName("ID");
 
                 entity.Property(e => e.Name)
                     .IsRequired()

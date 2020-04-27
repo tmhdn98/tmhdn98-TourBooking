@@ -42,8 +42,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // PUT: api/LsVehicles/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLsVehicle(int id, LsVehicle lsVehicle)
         {
@@ -74,27 +74,13 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // POST: api/LsVehicles
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<LsVehicle>> PostLsVehicle(LsVehicle lsVehicle)
         {
             _context.LsVehicle.Add(lsVehicle);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (LsVehicleExists(lsVehicle.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetLsVehicle", new { id = lsVehicle.Id }, lsVehicle);
         }

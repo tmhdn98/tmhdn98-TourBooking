@@ -1,0 +1,77 @@
+﻿<!-- Icons font CSS-->
+<link href="~/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all" />
+<link href="~/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all" />
+<!-- Font special for pages-->
+<link href="~/vendor/font-awesome-4.7/css/Lato.css" rel="stylesheet" />
+<link href="~/vendor/font-awesome-4.7/css/Poppins.css" rel="stylesheet" />
+<!-- Vendor CSS-->
+<link href="~/vendor/select2/select2.min.css" rel="stylesheet" media="all" />
+<link href="~/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+    .grid__container--popular {
+        grid-template-columns: [col1] 33.333% [col2] 33.333% [col3] 32.333% [end];
+        grid-template-rows: [row1] auto [row2] auto [row3] auto [row4] auto [end];
+    }
+    .grid__item {
+        padding: 0px;
+        margin-bottom: 0px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
+</style>
+<!-- Main CSS-->
+<link href="~/css/main.css" rel="stylesheet" media="all" />
+@await Component.InvokeAsync("FormSearch")
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="wrapper wrapper--w90auto">
+        
+
+        <div class="col-xs-12 no-padding">
+            <h3 class="localHeadLine hasLine" style="margin-top:20px">
+                <a class="clearfix" style="display:block;">
+                    <span class="float-left">
+                        Hot Deal Chào Mùa Mới
+                    </span>
+                </a>
+            </h3>
+            <div class="w3-container col-xs-12">
+                <div class="grid__container grid__container--popular ">
+                    <div class="w3-card-4 grid__item" style="width:50%">
+                        <img src="//cdn2.ivivu.com/2019/10/02/14/ivivu-singapore8-360x225.jpg" alt="Alps" style="width:100%">
+                        <div class="w3-container w3-center">
+                            <p>The Italian / Austrian Alps</p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 grid__item" style="width:50%">
+                        <img src="//cdn2.ivivu.com/2019/10/02/14/ivivu-singapore8-360x225.jpg" alt="Alps" style="width:100%">
+                        <div class="w3-container w3-center">
+                            <p>The Italian / Austrian Alps</p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 grid__item" style="width:50%">
+                        <img src="//cdn2.ivivu.com/2019/10/02/14/ivivu-singapore8-360x225.jpg" alt="Alps" style="width:100%">
+                        <div class="w3-container w3-center">
+                            <p>The Italian / Austrian Alps</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery JS-->
+<script src="~/vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="~/vendor/select2/select2.min.js"></script>
+<script src="~/vendor/jquery-validate/jquery.validate.min.js"></script>
+<script src="~/vendor/bootstrap-wizard/bootstrap.min.js"></script>
+<script src="~/vendor/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="~/vendor/datepicker/moment.min.js"></script>
+<script src="~/vendor/datepicker/daterangepicker.js"></script>
+<!-- Main JS-->
+<script src="~/js/global.js"></script>
+

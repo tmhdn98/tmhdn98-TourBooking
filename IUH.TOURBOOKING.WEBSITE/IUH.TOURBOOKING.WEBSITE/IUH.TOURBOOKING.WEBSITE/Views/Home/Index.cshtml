@@ -21,12 +21,9 @@
 
 <!-- Main CSS-->
 <link href="~/css/main.css" rel="stylesheet" media="all" />
-    @await Component.InvokeAsync("FormSearch")
+@await Component.InvokeAsync("FormSearch")
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
     <div class="wrapper wrapper--w90auto">
-        <div>
-            <h1><strong>Ưu đ&atilde;i h&ocirc;m nay....</strong></h1>
-        </div>
         <!-- Carousel chủ đề-->
         @await Component.InvokeAsync("Theme")
         <!--End-->
@@ -35,60 +32,13 @@
         <!--End-->
         <!-- grid list trong nước-->
         @await Component.InvokeAsync("Domestic")
-
+        <!--End-->
+        <!-- grid list nước ngoài-->
+        @await Component.InvokeAsync("Foreign")
         <!--End-->
     </div>
 </div>
-    <script>
-        $(document).ready(function () {
-            $("#theme").owlCarousel({
-                loop: true,
-                autoplay: false,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                margin: 10,
-                lazyLoad: true,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 2,
-                        loop: true
-                    },
-                    600: {
-                        items: 3,
-                        loop: true
-                    },
-                    1000: {
-                        items: 4,
-                        loop: true
-                    }
-                }
-            })
-            $("#discount").owlCarousel({
-                loop: true,
-                autoplay: false,
-                autoplayTimeout: 2000,
-                autoplayHoverPause: true,
-                margin: 10,
-                lazyLoad: true,
-                responsiveClass: false,
-                responsive: {
-                    0: {
-                        items: 2,
-                        loop: true
-                    },
-                    600: {
-                        items: 1,
-                        loop: true
-                    },
-                    1000: {
-                        items: 1,
-                        loop: true
-                    }
-                }
-            })
-        });
-    </script>
+    
     <!-- Jquery JS-->
     <script src="~/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->

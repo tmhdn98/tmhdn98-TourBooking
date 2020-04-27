@@ -27,6 +27,20 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
             return await _context.LsTourGroup.ToListAsync();
         }
 
+        // GET: api/LsTourGroups/getDomestic
+        [HttpGet("getDomestic")]
+        public async Task<ActionResult<IEnumerable<LsTourGroup>>> GetLsTourGroupDomestic()
+        {
+            return await _context.LsTourGroup.Where(p => p.DomesticOrForeign == true).ToListAsync();
+        }
+
+        // GET: api/LsTourGroups
+        [HttpGet("getForeign")]
+        public async Task<ActionResult<IEnumerable<LsTourGroup>>> GetLsTourGroupForeign()
+        {
+            return await _context.LsTourGroup.Where(p => p.DomesticOrForeign == false).ToListAsync();
+        }
+
         // GET: api/LsTourGroups/5
         [HttpGet("{id}")]
         public async Task<ActionResult<LsTourGroup>> GetLsTourGroup(int id)
@@ -42,8 +56,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // PUT: api/LsTourGroups/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLsTourGroup(int id, LsTourGroup lsTourGroup)
         {
@@ -74,8 +88,8 @@ namespace IUH.TOURBOOKING.SERVICE.API.Controllers
         }
 
         // POST: api/LsTourGroups
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<LsTourGroup>> PostLsTourGroup(LsTourGroup lsTourGroup)
         {
